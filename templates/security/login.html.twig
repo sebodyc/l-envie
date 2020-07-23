@@ -1,0 +1,30 @@
+
+
+
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+    <div class="d-flex flex-column justify-content-center align-items-center" style="height:100vh;background-image: url('./sympics/laptop.jpg');background-size: cover;
+    background-repeat: no-repeat;)">
+        <div class="auth-container p-5" style="background-color: rgba(255,255,255,0.9);
+        border-radius: 1em ; ">
+            <h1>La courgette </h1>
+            <p class="lead">Admin Connection</p>
+            <form action="" method="post">
+                <div class="form-group"><input type="email" placeholder="adresse email" name="_username"></div>
+                <div class="form-group"><input type="password" placeholder="password" name="_password"></div>
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <a href="{{ path('security_logout') }}" class="btn btn-danger">Deconnexion</a>
+                {% else %}
+                    <button type="submit" class="btn btn-primary">connexion</button>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a type="button" href="{{ path('admin') }}" class="btn btn-primary">Admin</a>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+{% endblock %}
