@@ -1,0 +1,65 @@
+<style>
+    .features-boxed{
+        height: 30vh;
+        background-image:url("image/wood.png");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .cardfeat{
+
+        padding-top: 2rem;
+        background-color: rgba(255, 255, 255, 0.8) ;
+    }
+
+</style>
+
+
+
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="container d-flex justify-content-around ">
+                <article class="text-center">
+                    {% for platdj in platDuJour  %}
+                        <h5>{{ platdj.title|capitalize }} .............. <span>{{ platdj.price }} €</span></h5>
+                        <p>{{ platdj.description |capitalize}}</p>
+                    {% endfor %}
+
+                </article>
+                <article class="text-center">
+                    {% for suggestions in suggestion  %}
+                        <h5>{{ suggestions.title|capitalize }} .............. <span>{{ suggestions.price }} €</span></h5>
+                        <p>{{ suggestions.description |capitalize}}</p>
+                    {% endfor %}
+
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-boxed ">
+        <div class="container cardfeat ">
+            <div class="row justify-content-center features ">
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fas fa-leaf"></i>
+                        <h3 class="name">Produits frais</h3>
+                        <p class="description">Nous n'utilison que des produits frais et tout est fait maison.</p></div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fas fa-bicycle"></i>
+                        <h3 class="name">Livraison</h3>
+                        <p class="description">Possibilité de se faire livrer le midi et le soir .</p></div>
+                </div>
+                <div class="col-sm-6 col-md-5 col-lg-4 item">
+                    <div class="box"><i class="fas fa-history"></i>
+                        <h3 class="name">Horaires </h3>
+                        <p class="description">Tout les jours sauf le mercredi .</p></div>
+                    <p> Du lundi au jeudi 12h/14h30 et 19h30/22h30 .</p>
+                    <p> Du vendredi au dimanche 12h/15h et 19h30/00h00 .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

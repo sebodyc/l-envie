@@ -1,0 +1,42 @@
+<style>
+    a {
+        position: relative;
+    }
+
+    a::after {
+        content: '';
+        transform-origin: 0 0;
+        transform: scaleX(0);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: .4em;
+        background: whitesmoke;
+        z-index: -1;
+        opacity: 0.8;
+        transition: transform .7s;
+    }
+    a:hover::after {
+        transform: scaleX(1);
+    }
+
+
+
+</style>
+
+
+
+
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+    <div class="container"><a class="navbar-brand" href="{{ path('index') }}">L'Envie</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false"
+                                                                                     aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto text-uppercase">
+                <li class="nav-item" role="presentation"><a class="nav-link " href="{{ path('menu') }}">Carte</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{ path('contact') }}">Contact</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#findUs">Reservation au 07 51 34 75 65</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

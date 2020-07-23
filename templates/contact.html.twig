@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}l'Envie aix en provence nous contacter!{% endblock %}</title>
+    {% block stylesheets %}
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    {% endblock %}
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <style>
+        .menu-area img{
+            padding: 1rem;
+            border-radius: 0.4rem;
+        }
+        h2{
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+        .menu-title{
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .menu-spec{
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            background-color: rgba(221,221,221,0.3);
+        }
+    </style>
+
+</head>
+<body>
+
+{% block content %}
+    {% include "navbar.html.twig" %}
+    {% include "header.html.twig" %}
+
+    <div class="contact">
+        <div class="container" >
+            <h2>Par telephonne </h2>
+                <p>07.24.32.55.12</p>
+            <h2>Par mail </h2>
+            <p>lenvie@gmail.com</p>
+            <a href="mailto:damore.sebastien@gmail.com?subject=Premier contact&body=Bonjour">Envoyer </a>
+
+        </div>
+    </div>
+
+    {% include "footer.html.twig" %}
+{% endblock %}
+
+</body>
+
+{% block javascripts %}{% endblock %}
+
+
+</html>
